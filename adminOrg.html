@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <style>
+    body {
+      font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #a5ccec;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="admin.html">Applicants</a>
+    <a href="adminOrg.html">Organizations</a>
+    <a href="#">Accepted Interns</a>
+  </div>
+
+  <h2 class="m-3" style="text-align: center;">AppIn ADMIN PAGE</h2>
+  <span style="font-size:30px;cursor:pointer;margin-top: -50px;" class="ml-5" onclick="openNav()">&#9776; open</span>
+
+  <h3 class="m-3" style="text-align: center;">Post Internship Organizations</h3>
+
+  <form id="orgPost" class="form-group m-5 p-5 container">
+    <div class="row">
+      <div class="col-md-5">
+        <input type="text" id="orgName" placeholder="organization name" style="width: 550px;" required>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5">
+        <input type="text" id="org_postTitle" placeholder="post title" style="width: 550px;" required>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-5">
+        <input type="text" id="org_description" placeholder="description" style="width: 550px;height: 200px;" required>
+        <div class="row">
+          <div class="col-md-5 mt-3">
+             <input type="text" id="org_led" placeholder="level of education" required style="width: 300px;"> 
+            <!-- <label>
+              Level of Education
+            </label> -->
+            <!-- <select name="led" id="org_led" style="width: 315px">
+              <option value="choose">Choose...</option>
+              <option value="BA">BA</option>
+              <option value="MA">MA</option>
+              <option value="BSC">BSC</option>
+              <option value="MSC">MSC</option>
+              <option value="PHD">PHD</option>
+            </select> -->
+
+          </div>
+
+          <!-- <div class="col-md-5 mt-3 ml-3">
+                <input type="file" id="org_image" placeholder="image" accept="image/*" required style="width: 300px;">
+            </div> -->
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5">
+        <div class="row">
+          <div class="col-md-12">
+            <input type="text" id="org_req" placeholder="requirments" required style="width: 550px;height: 200px;">
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-5">
+            <input type="number" id="org_aop" placeholder="amount of people it takes" required style="width:300px;">
+          </div>
+          <div class="col-md-2"></div>
+          <div class="col-md-5">
+            <input type="date" id="org_deadline" required style="width:290px;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <button type="submit" class="btn btn-outline-success mt-5" id="orgPost">Post</button>
+  </form>
+
+
+
+
+  <script>
+
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+    // var loadFile = function (event) {
+    //                 var output = document.getElementById('output');
+    //                 output.src = URL.createObjectURL(event.target.files[0]);
+    //                 output.onload = function () {
+    //                     // URL.revokeObjectURL(output.src) // free memory
+    //                     db.organizations.add({org_post_image: output.src})
+    //                 }
+
+    //             }
+
+
+    if (!window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+    }
+
+
+  </script>
+  <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+  <script type="module" src="./assets/model/db.js"></script>
+  <script type="module" src="./assets/controller/organization-controller.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>user profile with application notification </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- add style css  -->
+    <link href="assets/css/pro_styles.css" rel="stylesheet">
+    <link href="assets/css/pro_checkout.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- navbar start -->
+    <!-- <link rel="stylesheet" href="./assets/css/pro_nav.css" /> -->
+    <link rel="stylesheet" href="./assets/css/style_index.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+</head>
+
+<body>
+
+    <nav
+    class="navbar navbar-expand-lg navbar-light bg-light sticky-top"
+    id="navbar-custom"
+  >
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"
+        ><img
+          class="logo_img"
+          src="./assets/images/logo.png"
+          alt="logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link linksNav" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link linksNav" href="organizations.html">Organizations</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link linksNav" href="universities.html">Universities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link linksNav" href="about.html">about</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 mr-lg-0" id="submit">
+          <!-- <div class="searchbar">
+            <input
+              class="search_input"
+              type="text"
+              name=""
+              placeholder="Search..."
+            />
+            <a href="#" class="search_icon"><i class="fa fa-search"></i></a>
+          </div> -->
+          <div class="p-md-2 p-sm-5">
+            <a href="pro_index.html"
+              ><i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+    <!-- nav bar end -->
+
+    <!-- BEGIN USER PROFILE -->
+    <div class="container bootstrap snippets bootdey">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="grid profile">
+                    <div class="grid-header">
+                        <div class="col-xs-2">
+                            <img src="assets/images/photo.png" class="img-circle" alt="logo">
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="showContent">
+                                <h3 class="fullName"></h3>
+                            <p class="showWork">Rediet Mengiste</p>
+                            <p>5kilo, Addis Abeba, Ethiopia</p>
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <form id="orgPost" class="form-group m-5 p-5 container">
+                        <div class="row">
+                          <div class="col-md-5">
+                            <input type="text" id="fn" placeholder="first name" style="width: 550px;" required>
+                          </div>
+                          <div class="col-md-2"></div>
+                          <div class="col-md-5">
+                            <input type="text" id="ln" placeholder="last name" style="width: 550px;" required>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 mt-3">
+                               <input type="text" id="led" placeholder="level of education" required style="width: 300px;"> 
+                              <!-- <label>
+                                Level of Education
+                              </label> -->
+                              <!-- <select name="led" id="org_led" style="width: 315px">
+                                <option value="choose">Choose...</option>
+                                <option value="BA">BA</option>
+                                <option value="MA">MA</option>
+                                <option value="BSC">BSC</option>
+                                <option value="MSC">MSC</option>
+                                <option value="PHD">PHD</option>
+                              </select> -->
+                  
+                            </div>
+                  
+                            <!-- <div class="col-md-5 mt-3 ml-3">
+                                  <input type="file" id="org_image" placeholder="image" accept="image/*" required style="width: 300px;">
+                              </div> -->
+                          </div>
+                   
+                    
+                    
+                    
+                        <button type="submit" class="btn btn-outline-success mt-5" id="submit">Post</button>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="./assets/js/pro_checkout.js"></script> -->
+    <!-- <script src="./assets/js/pro_app.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"
+      integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+      integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script><script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script type="module" src="./assets/model/db_profile.js"></script>
+    <script type="module" src="./assets/controller/db_profile_controller.js"></script>
+    
+    <!-- <script type="module" src="./assets/controller/db_profile_edit.js"></script> -->
+    <script>
+        
+    </script>
+
+</body>
+
+</html>
